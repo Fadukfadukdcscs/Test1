@@ -1,0 +1,15 @@
+correct_password = "1227"
+max_attempts = 5
+attempts = 0
+
+while attempts < max_attempts:
+    input_password = input("비밀번호를 입력하세요: ")
+    if input_password == correct_password:
+        print("비밀번호가 정확합니다. 환영합니다!")
+        break
+    else:
+        attempts += 1
+        print(f"비밀번호가 틀렸습니다. {max_attempts - attempts}번 남았습니다.")
+
+if attempts == max_attempts:
+    print("비밀번호 입력 시도가 5번 실패하여 계정이 잠겼습니다.")
